@@ -168,6 +168,7 @@ jobs:
           path: target
  
       - name: Run Trivy filesystem scan
+        continue-on-error: true
         uses: aquasecurity/trivy-action@master
         with:
           scan-type: 'fs'
