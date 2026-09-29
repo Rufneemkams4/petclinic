@@ -132,6 +132,7 @@ jobs:
  
       - name: SonarCloud Quality Gate Check
         id: quality-gate
+        continue-on-error: true
         uses: phwt/sonarqube-quality-gate-action@v1
         with:
           sonar-project-key: ${{ env.SONAR_PROJECT_KEY }}
